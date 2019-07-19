@@ -7,6 +7,6 @@ import ro.msg.learning.shop.model.BaseEntity;
 import java.io.Serializable;
 
 @NoRepositoryBean
-public interface IBaseRepository<T extends BaseEntity<ID>, ID extends Serializable>
-        extends CrudRepository<T, ID> {
+public interface IBaseRepository<T extends BaseEntity<K>, K extends Serializable>
+        extends CrudRepository<T, K> {
 }
