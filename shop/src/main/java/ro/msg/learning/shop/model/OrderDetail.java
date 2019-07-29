@@ -1,16 +1,19 @@
 package ro.msg.learning.shop.model;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class OrderDetail extends BaseEntity<Long> {
+    private static final long serialVersionUID = -4313671845001698037L;
     @ManyToOne(fetch = FetchType.LAZY, targetEntity = Order.class)
-    @JoinColumn(name = "order", referencedColumnName = "id")
+    @JoinColumn(name = "orderId", referencedColumnName = "id")
     private Order order;
 
     @ManyToOne(fetch = FetchType.LAZY, targetEntity = Product.class)

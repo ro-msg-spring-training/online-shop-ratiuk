@@ -1,16 +1,19 @@
 package ro.msg.learning.shop.model;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
 @Table(name = "Orders")
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class Order extends BaseEntity<Long> {
+    private static final long serialVersionUID = -1142328902050727961L;
     @ManyToOne(fetch = FetchType.LAZY, targetEntity = Location.class)
     @JoinColumn(name = "shippedFrom", referencedColumnName = "id")
     private Location shippedFrom;

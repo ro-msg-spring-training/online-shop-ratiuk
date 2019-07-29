@@ -1,0 +1,10 @@
+delete from orderdetail;
+delete from orders;
+delete from stock;
+delete from revenue;
+delete from location;
+delete from address;
+delete from product;
+delete from productcategory;
+delete from supplier;
+delete from customer;

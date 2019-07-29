@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Data
 public abstract class BaseEntity<T> implements Serializable {
     @Id
-    @GeneratedValue(strategy= GenerationType.SEQUENCE)
+    @GeneratedValue(strategy= GenerationType.AUTO, generator = "seq_mytable_sid")
     @Column(updatable = false, nullable = false)
     protected T id;
 
