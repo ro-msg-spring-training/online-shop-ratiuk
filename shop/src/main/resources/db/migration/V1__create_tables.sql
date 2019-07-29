@@ -81,10 +81,6 @@ CREATE TABLE Revenue(
         FOREIGN KEY(location) REFERENCES Location(id));
 
 create sequence seq_mytable_sid
-minvalue 1
-maxvalue 9999999
-increment by 1
-start with 1
+minvalue 1 maxvalue 9999999 increment by 1 start with 1
 cache 1000
-order
-nocycle;
+order nocycle;

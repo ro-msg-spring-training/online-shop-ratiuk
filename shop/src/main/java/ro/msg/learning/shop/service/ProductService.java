@@ -1,7 +1,6 @@
 package ro.msg.learning.shop.service;
 
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 import ro.msg.learning.shop.dto.ProdProdCategoryDTO;
 import ro.msg.learning.shop.model.Product;
