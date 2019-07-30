@@ -32,8 +32,8 @@ INSERT INTO Stock(id, product, location, quantity) VALUES
                 (5, 3, 3, 30);
 
 INSERT INTO Customer(id, firstName, lastName, username, password, emailAddress) VALUES
-                (1, 'John', 'Doe', 'jonhd', 'password123', 'johndoe@yahoo.com'),
-                (2, 'Maria', 'Cristina', 'merry23', 'merry23', 'merry23@yahoo.com');
+                (1, 'John', 'Doe', 'jonhd', '$2a$10$73zYQ/NaZcrtj.8nBHeSR.1a64J4Vf/QtX4rUCKu3dx67r1d9zf2W', 'johndoe@yahoo.com'),
+                (2, 'Maria', 'Cristina', 'merry23', '$2a$10$XcwFdOIu3lr1XSa1HEFOFOpL7IlrpN3bfYRFN1BNU5rkpLqjl89cu', 'merry23@yahoo.com');
 
 INSERT INTO Orders(id, shippedFrom, customer, createdAt, address) VALUES
                 (1, 1, 1, '2019-06-23 10:23:55', 2),
