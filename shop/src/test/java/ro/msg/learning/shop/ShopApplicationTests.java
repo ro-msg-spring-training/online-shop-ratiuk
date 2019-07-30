@@ -1,16 +1,14 @@
 package ro.msg.learning.shop;
 
-/*dxgfimport org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.junit.runners.Suite;
+import ro.msg.learning.shop.unit.MostAbundantLocationTest;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+@RunWith(Suite.class)
+@Suite.SuiteClasses({
+        MostAbundantLocationTest.class,
+})
 public class ShopApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
 
-}*/
+}

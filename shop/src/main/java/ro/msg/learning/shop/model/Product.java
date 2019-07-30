@@ -1,16 +1,19 @@
 package ro.msg.learning.shop.model;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class Product extends BaseEntity<Long> {
 
+    private static final long serialVersionUID = -4016633629061013846L;
     @Column(nullable = false)
     private String name;
 
