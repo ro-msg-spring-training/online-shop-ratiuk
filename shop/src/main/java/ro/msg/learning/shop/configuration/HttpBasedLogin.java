@@ -1,7 +1,6 @@
 package ro.msg.learning.shop.configuration;
 
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -18,12 +17,10 @@ import ro.msg.learning.shop.service.CustomerUserDetailsService;
 @AllArgsConstructor
 @Profile("http")
 public class HttpBasedLogin extends WebSecurityConfigurerAdapter {
-    private CustomAuthenticationProvider authProvider;
     private CustomerUserDetailsService userDetailsService;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        //auth.authenticationProvider(authProvider);
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
     }
     @Bean
